@@ -146,8 +146,8 @@ def StatusMessage(text):
 	crt.CommandWindow.Text = text
 
 def Main():
-	iosTabs = FindTabs("^R\d$")
-	iosXrTabs = FindTabs("^XR\d$")
+	iosTabs = FindTabs("^R\d+$")
+	iosXrTabs = FindTabs("^XR\d+$")
 	if iosTabs == [] and iosXrTabs == []:
 		crt.Dialog.MessageBox("No router tabs found! Please ensure you have tabs in a connected state that are named R# for IOS/IOS-XE devices and XR# for IOS-XR devices, then try again.")
 		return
